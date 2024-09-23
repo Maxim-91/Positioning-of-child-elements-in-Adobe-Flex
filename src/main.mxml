@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" x="37" y="49">
+ <mx:Script>
+ 	<![CDATA[
+ 		import mx.containers.Canvas;
+ 		public function moveUp (event:Event):void
+ 		{
+ 		 var box:Canvas=event.currentTarget as Canvas;
+ 		 ColorsPanel.removeChild(box);
+ 		 ColorsPanel.addChild(box);
+ 		}
+ 	]]>
+ </mx:Script>
+ <mx:Panel id="ColorsPanel" x="0" y="0" width="290" height="310" layout="absolute" title="Віка і Макс лаба 9">
+ <mx:Canvas id="redBox" click="moveUp(event)" x="10" y="60" width="150" height="150" backgroundColor="#FF0000">  	
+ </mx:Canvas>
+ <mx:Canvas id="geenBox" click="moveUp(event)" x="60" y="110" width="150" height="150" backgroundColor="#00FF00">  	
+ </mx:Canvas> 
+ <mx:Canvas id="blueBox" click="moveUp(event)" x="110" y="10" width="150" height="150" backgroundColor="#0000FF">  	
+ </mx:Canvas>	
+ </mx:Panel>
+</mx:Application>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mx:Application xmlns:mx="http://www.adobe.com/2006/mxml" layout="absolute" alpha="1.0">
+ <mx:Script>
+ 	<![CDATA[
+ 		import mx.containers.Canvas;
+ 		import flash.events.Event;
+ 		public function moveUp(event:Event):void
+ 		{
+ 		 var box:Canvas=event.currentTarget as Canvas;
+ 		 ColorsPanel.removeChild(box);
+ 		 ColorsPanel.addChild(box);
+ 		 if (box.width<box.maxWidth)
+ 		 {
+ 		  box.width*=1.1;
+ 		 }
+ 		 else 
+ 		 {
+ 		  box.width*=0.9;
+ 		 }
+ 		} 		
+ 	]]>
+ </mx:Script>
+ <mx:Panel id="ColorsPanel" x="42" y="10" width="319" height="305" layout="absolute">
+  <mx:Canvas x="52" y="68" width="100" height="100" backgroundColor="#F90E02" maxWidth="120" click="moveUp(event)">
+  </mx:Canvas>
+  <mx:Canvas x="110" y="120" width="100" height="100" themeColor="#0397F5" backgroundColor="#19A202" maxWidth="120" click="moveUp(event)">
+  </mx:Canvas> 	
+  <mx:Canvas x="123" y="37" width="100" height="100" backgroundColor="#060BF0" maxWidth="120" click="moveUp(event)">
+  </mx:Canvas> 
+ </mx:Panel>	
+</mx:Application>
